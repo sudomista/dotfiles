@@ -18,6 +18,8 @@ Fetch: ```fastfetch```
 
 Screenshots: ```grim``` & ```slurp```
 
+Fonts: ```JetBrains Mono``` & ```Font Awesome```
+
 ### Installing 
 ```bash
 git clone https://github.com/sudomista/dotfiles
