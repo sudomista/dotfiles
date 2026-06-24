@@ -23,6 +23,7 @@ Fonts: ```JetBrains Mono``` & ```Font Awesome```
 ### Installing 
 ```bash
 git clone https://github.com/sudomista/dotfiles
+cd dotfiles
 mv * ~/.config/
 ```
 
