@@ -1,0 +1,147 @@
+@define-color bg     #1f1f28;
+@define-color bg-alt #353545;
+@define-color fg     #dcd7ba;
+
+@define-color blue   #7fb4ca;
+@define-color green  #98bb6c;
+@define-color red    #e46876;
+@define-color purple #957fb8;
+@define-color orange #ffa066;
+@define-color yellow #c0a36e;
+@define-color cyan 	 #6a9589;
+
+* {
+	border: none;
+	font-family: "JetBrains Mono", "Font Awesome 7 Brands", "Font Awesome 7 Free Solid";
+	font-weight: bold;
+	font-size: 16px;
+	padding: 0;
+	margin: 0 4px;
+}
+
+#waybar {
+	color: @fg;
+	background-color: @bg;
+	padding: 0;
+	margin: 0;
+}
+
+#custom-arch,
+#workspaces,
+#mpris,
+#clock,
+#pulseaudio,
+#backlight,
+#network,
+#language,
+#custom-power,
+#tray {
+	color: @fg;
+	background-color: @bg-alt;
+	border-radius: 6px;
+	padding: 0 6px;
+	margin: 6px 0;
+}
+
+#custom-arch {
+	color: @bg;
+	background-color: @blue;
+}
+
+#workspaces {
+	padding: 0;
+}
+
+#workspaces button {
+	border-radius: 6px;
+	color: @fg;
+	padding: 0 6px;
+	margin: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+	color: @bg;
+    background-color: rgba(220, 215, 186, 0.3);
+}
+
+#workspaces button.focused {
+	color: @bg;
+	background-color: @fg;
+	padding: 0 6px;
+	margin: 0;
+}
+
+#workspaces button.focused:hover {
+	color: @bg;
+	background-color: @fg;
+}
+
+#mpris {
+	color: @bg;
+	background-color: @cyan;
+}
+
+#mpris.paused {
+	background-color: @orange;
+}
+
+#clock {
+	color: @green;
+}
+
+#pulseaudio {
+	color: @blue;
+}
+
+#pulseaudio.muted {
+	color: @bg;
+}
+
+#backlight {
+	color: @yellow;
+}
+
+#network {
+	color: @bg;
+	background-color: @purple;
+}
+
+#network.disconnected {
+	color: @red;
+	background-color: @bg;
+}
+
+#language {
+	color: @bg;
+	background-color: @blue;
+}
+
+#custom-power {
+	color: @bg;
+	background-color: @red;
+}
+
+#tray {
+	color: @fg;
+	background-color: @bg-alt;
+}
+
+menu {
+    border-radius: 0px;
+    color: @fg;
+    background-color: @bg;
+    padding: 4px 0;
+}
+
+menuitem {
+    border-radius: 0px;
+    color: @fg;
+    padding: 4px;
+}
+
+tooltip {
+	background: @bg;
+	border: 2px solid @bg-alt;
+	border-radius: 0;
+}

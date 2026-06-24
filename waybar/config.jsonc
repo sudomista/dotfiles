@@ -1,0 +1,121 @@
+{
+	"layer": "top",
+	"position": "top",
+	"spacing": 8,
+	"fixed-center": true,
+	
+	"modules-left": [
+		"custom/arch",
+		"sway/workspaces"
+	],
+	"modules-right": [
+		"mpris",
+		"clock",
+		"pulseaudio",
+		"backlight",
+		"network",
+		"sway/language",
+		"custom/power",
+		"tray"
+	],
+	
+	"sway/workspaces": {
+		"format": "{icon}",
+		"reverse-scroll": true,
+		"sort-by-number": true
+	},
+	
+	"mpris": {
+		"format": "{player_icon} {status}",
+		"format-paused": "{status_icon} {status}",
+		"format-stopped": "{status_icon} {status}",
+		"tooltip-format": "({player})  {artist} - {title}",
+		"player": "playerctld",
+		"player-icons": {
+			"default": "err",
+			"kew": "",
+			"firefox": "",
+			"telegram": ""
+		},
+		"status-icons": {
+			"paused": "⏸",
+			"stopped": "STOPPED",
+		},
+		"interval": 1
+	},
+	
+	"clock": {
+		"format": " {:%H:%M}",
+		"format-alt": " {:%A, %d %B}",
+		"interval": 1,
+		"tooltip": false
+	},
+	
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": " muted",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"phone-muted": "",
+			"portable": "",
+			"default": ["", "", "", ""]
+		},
+		"scroll-step": 5.0,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pkill pavucontrol || pavucontrol"
+	},
+	
+	"backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false,
+        "scroll-step": 5.0
+    },
+    
+    "sway/language": {
+		"format": "{short}",
+		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+	},
+	
+	"network": {
+		"format-wifi": "",
+		"format-ethernet": "",
+		"format-disconnected": "",
+        "tooltip-format-wifi": " {essid} |  {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "tooltip-format-ethernet": " {ifname} |  {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "tooltip-format-disconnected": " Disconnected",
+        "interval": 1,
+		"on-click": "nm-connection-editor"
+	},
+	
+	"tray": {
+		"icon-size": 16,
+		"spacing": 8,
+		"icons": {
+			"qBittorrent": "/home/mista/.local/share/icons/qbittorrent-tray.svg"
+		}
+	},
+	
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "~/.config/waybar/power_menu.xml",
+		"menu-actions": {
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"suspend": "systemctl suspend",
+			"lock": "swaylock"
+        }
+	},
+	
+	"custom/arch": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "pkill wofi || wofi"
+	}
+}

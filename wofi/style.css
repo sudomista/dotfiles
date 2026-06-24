@@ -1,0 +1,51 @@
+@define-color bg     #1f1f28;
+@define-color bg-alt #353545;
+@define-color fg     #dcd7ba;
+
+@define-color blue   #7fb4ca;
+@define-color green  #98bb6c;
+@define-color red    #e46876;
+@define-color purple #957fb8;
+@define-color orange #ffa066;
+@define-color yellow #c0a36e;
+@define-color cyan 	 #6a9589;
+
+#window {
+    margin: 0;
+    border: 2px solid @fg;
+    border-radius: 0;
+    color: @fg;
+    background-color: @bg;
+    font-family: 'JetBrains Mono SemiBold';
+    font-size: 16px;
+}
+
+#input {
+    margin: 8px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: @bg;
+    color: #ffffff;
+}
+
+#entry {
+    margin: 0px 8px 8px 8px;
+    border-radius: 0;
+    background-color: inherit;
+}
+
+#entry:selected {
+    background-color: @bg-alt;
+}
+
+#text {
+	color: #ffffff;
+	background: inherit;
+    margin: 4px;
+}
+
+#img {
+	background: inherit;
+	margin: 0 2px 0 0;
+}
