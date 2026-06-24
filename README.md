@@ -25,7 +25,7 @@ mv * ~/.config/
 ```
 
 ### Note
-It's worth noting that I maked a configs in sense of my screen resolution and etc. In this case, you will need to manually adjust, for example, the size of the waybar or directories in some files.
+It's worth noting that I maked a configs in sense of my screen resolution and etc. In this case, you will need to manually adjust, for example, the size of waybar or directories in some files.
 
 
 ### Known issues
